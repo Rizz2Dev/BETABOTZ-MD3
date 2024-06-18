@@ -17,7 +17,7 @@ function start() {
          stdio: ['inherit', 'inherit', 'inherit', 'ipc']
       })
       .on('message', data => {
-         if (data == 'reset') {
+         if (data == 'restart') {
             console.log('Restarting Bot...')
             p.kill()
             start()
